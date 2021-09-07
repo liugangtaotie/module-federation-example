@@ -3,7 +3,10 @@ default: help
 
 # build all theme
 dev:
-	npm run docs:dev
+	npm start
+
+remove:
+	npm run remove
 
 analyz:
 	npm run analyz
@@ -16,12 +19,9 @@ autofix:
 
 dll:
 	npm run build:dll
-	
-test:
-	npm run build:development
 
 pro:
-	npm run docs:build
+	npm run build
 
 lint:
 	npm run lint

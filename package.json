@@ -1,0 +1,45 @@
+{
+  "name": "module-federation-example",
+  "version": "1.0.0",
+  "description": "module-federation demo",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:main": "cd main && rm -rf node_modules && yarn",
+    "install:sub-first": "cd sub-first && rm -rf node_modules && yarn",
+    "install:sub-second": "cd sub-second && rm -rf node_modules && yarn",
+    "start": "npm-run-all --parallel start:*",
+    "start:sub-first": "cd sub-first && npm start",
+    "start:sub-second": "cd sub-second && npm start",
+    "start:main": "cd main && npm start",
+    "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
+    "build:sub-first": "cd sub-first && npm run build",
+    "build:sub-second": "cd sub-second && npm run build",
+    "build:main": "cd main && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "remove": "npm-run-all --parallel remove:*",
+    "remove:sub-first": "cd sub-first && rm -rf build/lib",
+    "remove:sub-second": "cd sub-second && rm -rf build/lib",
+    "stylelint": "npm-run-all --parallel stylelint:*",
+    "stylelint:sub-first": "cd sub-first && yarn stylelint",
+    "stylelint:sub-second": "cd sub-second && yarn stylelint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liugangtaotie/module-federation-example.git"
+  },
+  "keywords": [
+    "vite",
+    "vue2",
+    "module-federation",
+    "module-federation-example",
+    "demo"
+  ],
+  "author": "wuxiang",
+  "license": "MIT",
+  "__npminstall_done": false
+}
