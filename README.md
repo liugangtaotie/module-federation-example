@@ -1,9 +1,9 @@
 ## Installation
 
 ```bash
-cd main     yarn    npm start
-cd sub-first     yarn    npm start
-cd sub-second      yarn    npm start
+cd main          yarn      npm start
+cd sub-first     yarn      npm start
+cd sub-second    yarn      npm start
 ```
 
 ## view
