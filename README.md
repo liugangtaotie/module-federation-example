@@ -1,9 +1,9 @@
 ## Installation
 
 ```bash
-cd rs-sidecart     yarn    npm start
-cd webpack-spa     yarn    npm start
-cd vite-react      yarn    npm start
+cd main     yarn    npm start
+cd sub-first     yarn    npm start
+cd sub-second      yarn    npm start
 ```
 
 ## view
